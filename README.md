@@ -12,3 +12,17 @@ getProfit() - which calculates the profit from the book based on the price and q
 toString()
 
 [01.authorBoook.js](01.authorBoook.js)
+
+02. Write classes: Person class and Student class.
+
+let user1 = new Person("Name", "Surname", "female", 23);
+console.log(user1.toString()); // Name Surname, 23 years old.
+
+Student is inherited from Person. It should have
+fields
+year
+fee
+program(array of { programName, grade })
+
+[02.Student.js](02.Student.js)
+
