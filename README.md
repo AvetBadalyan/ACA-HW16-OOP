@@ -34,4 +34,5 @@ First character of next word must match last character of previous word.
 The word must not have already been said.
 
 ["word", "dowry", "yodel", "leader", "righteous", "serpent"]; // valid!
+
 [03.ShiriTori.js](03.ShiriTori.js)
