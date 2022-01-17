@@ -26,3 +26,13 @@ program(array of { programName, grade })
 
 [02.Student.js](02.Student.js)
 
+03. SHiritori
+
+This challenge is an English twist on the Japanese word game Shiritori. The basic premise is to follow two
+rules:
+First character of next word must match last character of previous word.
+The word must not have already been said.
+
+["word", "dowry", "yodel", "leader", "righteous", "serpent"]; // valid!
+
+[03.ShiriTori.js](03.ShiriTori.js)
