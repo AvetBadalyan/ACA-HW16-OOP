@@ -33,7 +33,7 @@ class Person {
   }
 
   set firstName(anun) {
-    if(typeof(anun) !== "string") {
+    if (typeof anun !== "string") {
       return `Please input a string!`;
     }
 
@@ -45,8 +45,8 @@ class Person {
   }
 
   set lastName(azganun) {
-    if(typeof(azganun) !== "string") {
-    return `Please input a string!`;
+    if (typeof azganun !== "string") {
+      return `Please input a string!`;
     }
 
     this._lastname = azganun;
@@ -57,7 +57,10 @@ class Person {
   }
 
   set gender(maleFemale) {
-    if (maleFemale.toLowerCase() === "female" || maleFemale.toLowerCase() === "male") {
+    if (
+      maleFemale.toLowerCase() === "female" ||
+      maleFemale.toLowerCase() === "male"
+    ) {
       this._gender = maleFemale;
     }
 
@@ -69,26 +72,26 @@ class Person {
   }
 
   set age(number) {
-    if(typeof(tariq) !== "number" || isNaN(tariq)) {
+    if (typeof tariq !== "number" || isNaN(tariq)) {
       return "Please fill in a number!";
     }
     this._age = tariq;
   }
 
   toString() {
-    return ` The Person called ${this._firstname} ${this._lastname} is ${this._age} years old.`
+    return ` The Person called ${this._firstname} ${this._lastname} is ${this._age} years old.`;
   }
 }
 
 const user1 = new Person("Avet", "Badalyan", "male", 26);
-console.log(user1.toString()); 
+console.log(user1.toString());
 
 class Student extends Person {
   constructor(firstname, lastname, gender, age, year, fee, program) {
     super(firstname, lastname, gender, age);
     this._year = year;
     this._fee = fee;
-    this._program = program
+    this._program = program;
   }
 
   get year() {
@@ -96,7 +99,7 @@ class Student extends Person {
   }
 
   set year(tariner) {
-    if(typeof(tariner) !== "number" || isNaN(tariner)) {
+    if (typeof tariner !== "number" || isNaN(tariner)) {
       return "Please fill in a number!";
     }
 
@@ -108,7 +111,7 @@ class Student extends Person {
   }
 
   set fee(dram) {
-    if(typeof(dram) !== "number" || isNaN(dram)) {
+    if (typeof dram !== "number" || isNaN(dram)) {
       return "Please fill in a number!";
     }
 
@@ -116,15 +119,14 @@ class Student extends Person {
   }
 
   toString() {
-      return `The Student ${this._firstname} ${this._lastname} which is ${this._gender} 
-    and ${this._age} years old, studies for ${this._year} years and pays ${this._fee} dram as fee `
+    return `The Student ${this._firstname} ${this._lastname} which is ${this._gender} 
+    and ${this._age} years old, studies for ${this._year} years and pays ${this._fee} dram as fee `;
   }
 }
 
-const student1 = new Student("Avet","Badalyan", "male", 26, 0.5,1250000,
-    [
-     {
+const student1 = new Student("Avet", "Badalyan", "male", 26, 0.5, 1250000, [
+  {
     programName: "Javascript",
-    grade: 90
-        }
-    ]);
+    grade: 90,
+  },
+]);

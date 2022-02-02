@@ -2,8 +2,8 @@
 
 class Author {
   constructor(name, email, gender) {
-    this._name   = name;
-    this._email  = email;
+    this._name = name;
+    this._email = email;
     this._gender = gender.toLowerCase();
   }
 
@@ -20,8 +20,8 @@ class Author {
   }
 
   set name(anun) {
-    if(typeof anun !== "string") {
-   throw new Error("Please write a string!") ;
+    if (typeof anun !== "string") {
+      throw new Error("Please write a string!");
     }
     this._name = anun;
   }
@@ -50,7 +50,7 @@ class Book {
   }
 
   set title(str) {
-    if(typeof(str) !== "string") {
+    if (typeof str !== "string") {
       return "The argument of setter must be a string!";
     }
 
@@ -66,7 +66,7 @@ class Book {
   }
 
   set price(dollar) {
-    if(typeof(dollar) !== "number" || isNaN(dollar)) {
+    if (typeof dollar !== "number" || isNaN(dollar)) {
       return "Please write a number!";
     }
 
@@ -78,7 +78,7 @@ class Book {
   }
 
   set quantity(quant) {
-    if(typeof(quant) !== "number" || isNaN(quant)) {
+    if (typeof quant !== "number" || isNaN(quant)) {
       return "Please write a number!";
     }
 
@@ -90,9 +90,7 @@ class Book {
   }
 
   toString() {
-    return (
-      `The Book " ${this._title} " which Author is ${this._author}  costs ${this._price} $`
-    );
+    return `The Book " ${this._title} " which Author is ${this._author}  costs ${this._price} $`;
   }
 }
 
@@ -102,11 +100,11 @@ console.log(author1.gender); // female
 console.log(author1.name); // J. K. Rowling
 console.log(author1.toString()); // Ms. J. K. Rowling
 
-author1.name = 12;  
+author1.name = 12;
 
-const book1 = new Book("Jungle book", author1, 20 , 5);
+const book1 = new Book("Jungle book", author1, 20, 5);
 
-console.log(book1.title);       
-console.log(book1.author);      
+console.log(book1.title);
+console.log(book1.author);
 console.log(book1.getProfit());
-console.log(book1.toString());  
+console.log(book1.toString());
